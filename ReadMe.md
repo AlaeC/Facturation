@@ -4,10 +4,6 @@ Ce projet suit une architecture propre, inspirée du modèle **MVC + Service + R
 
 ---
 
-## 🗂️ Arborescence
-
-
----
 
 ## 📁 Détail des dossiers
 
@@ -45,15 +41,8 @@ Contient la configuration de sécurité (optionnelle) :
 Contient des tests JUnit :
 - `FactureServiceTest.java` : teste le calcul automatique des montants
 
----
 
-## 📌 Bonnes pratiques utilisées
 
-- ✅ **Séparation des responsabilités**
-- ✅ **Injection de dépendances (`@Autowired`)**
-- ✅ **Validation (`@NotBlank`, `@Email`, `@Valid`)**
-- ✅ **Respect des règles métier**
-- ✅ **Tests unitaires (`@Test`, `assertEquals`)**
 
 ---
 ## 🧪 Test avec Postman
@@ -61,7 +50,7 @@ Contient des tests JUnit :
 Une collection Postman est fournie avec ce projet pour tester facilement l’API REST.
 
 📁 Fichier inclus :  
-`Facturation.postman_collection.json`
+`Facturation API.postman_collection.json`
 
 ### 🔧 Instructions :
 
