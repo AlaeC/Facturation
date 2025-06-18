@@ -1,0 +1,359 @@
+{
+	"info": {
+		"_postman_id": "d620b7ca-5b2b-479d-8be9-29a348b3a614",
+		"name": "Facturation API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "35702353"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/clients",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nom\": \"Entreprise ABC\",\r\n  \"email\": \"contact@abc.com\",\r\n  \"siret\": \"12345678900011\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/clients",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"clients"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Creer un client",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nom\": \"Entreprise ABC\",\r\n  \"email\": \"contact@abc.com\",\r\n  \"siret\": \"12345678900011\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/clients",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"clients"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lister tous les clients",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nom\": \"Entreprise ABC\",\r\n  \"email\": \"contact@abc.com\",\r\n  \"siret\": \"12345678900011\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/clients",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"clients"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lister tous les clients par id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"nom\": \"Entreprise ABC\",\r\n  \"email\": \"contact@abc.com\",\r\n  \"siret\": \"12345678900011\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/clients/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"clients",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "creer par facutre",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"client\": { \"id\": 1 },\r\n  \"date\": \"2025-06-18\",\r\n  \"lignes\": [\r\n    {\r\n      \"description\": \"Développement\",\r\n      \"quantite\": 2,\r\n      \"prixUnitaireHT\": 100.00,\r\n      \"tauxTVA\": 20.0\r\n    },\r\n    {\r\n      \"description\": \"Support\",\r\n      \"quantite\": 1,\r\n      \"prixUnitaireHT\": 50.00,\r\n      \"tauxTVA\": 10.0\r\n    }\r\n  ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/factures",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"factures"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lister toutes les factures",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"client\": { \"id\": 1 },\r\n  \"date\": \"2025-06-18\",\r\n  \"lignes\": [\r\n    {\r\n      \"description\": \"Développement\",\r\n      \"quantite\": 2,\r\n      \"prixUnitaireHT\": 100.00,\r\n      \"tauxTVA\": 20.0\r\n    },\r\n    {\r\n      \"description\": \"Support\",\r\n      \"quantite\": 1,\r\n      \"prixUnitaireHT\": 50.00,\r\n      \"tauxTVA\": 10.0\r\n    }\r\n  ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/factures",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"factures"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lister toutes les factures par id",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"client\": { \"id\": 1 },\r\n  \"date\": \"2025-06-18\",\r\n  \"lignes\": [\r\n    {\r\n      \"description\": \"Développement\",\r\n      \"quantite\": 2,\r\n      \"prixUnitaireHT\": 100.00,\r\n      \"tauxTVA\": 20.0\r\n    },\r\n    {\r\n      \"description\": \"Support\",\r\n      \"quantite\": 1,\r\n      \"prixUnitaireHT\": 50.00,\r\n      \"tauxTVA\": 10.0\r\n    }\r\n  ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/factures/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"factures",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "exporter une facture",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"client\": { \"id\": 1 },\r\n  \"date\": \"2025-06-18\",\r\n  \"lignes\": [\r\n    {\r\n      \"description\": \"Développement\",\r\n      \"quantite\": 2,\r\n      \"prixUnitaireHT\": 100.00,\r\n      \"tauxTVA\": 20.0\r\n    },\r\n    {\r\n      \"description\": \"Support\",\r\n      \"quantite\": 1,\r\n      \"prixUnitaireHT\": 50.00,\r\n      \"tauxTVA\": 10.0\r\n    }\r\n  ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/factures/1/export",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"factures",
+						"1",
+						"export"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "rechercher par client",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"client\": { \"id\": 1 },\r\n  \"date\": \"2025-06-18\",\r\n  \"lignes\": [\r\n    {\r\n      \"description\": \"Développement\",\r\n      \"quantite\": 2,\r\n      \"prixUnitaireHT\": 100.00,\r\n      \"tauxTVA\": 20.0\r\n    },\r\n    {\r\n      \"description\": \"Support\",\r\n      \"quantite\": 1,\r\n      \"prixUnitaireHT\": 50.00,\r\n      \"tauxTVA\": 10.0\r\n    }\r\n  ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/factures/search?clientId=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"factures",
+						"search"
+					],
+					"query": [
+						{
+							"key": "clientId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "rechercher client par date ",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"client\": { \"id\": 1 },\r\n  \"date\": \"2025-06-18\",\r\n  \"lignes\": [\r\n    {\r\n      \"description\": \"Développement\",\r\n      \"quantite\": 2,\r\n      \"prixUnitaireHT\": 100.00,\r\n      \"tauxTVA\": 20.0\r\n    },\r\n    {\r\n      \"description\": \"Support\",\r\n      \"quantite\": 1,\r\n      \"prixUnitaireHT\": 50.00,\r\n      \"tauxTVA\": 10.0\r\n    }\r\n  ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/factures/search?date=2025-06-18",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"factures",
+						"search"
+					],
+					"query": [
+						{
+							"key": "date",
+							"value": "2025-06-18"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
